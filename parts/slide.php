@@ -1,0 +1,41 @@
+<div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5>Bienvenue</h5>
+                                <h1 class="display-1">Service de voyage</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.<br> Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
+                        <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5>Formations</h5>
+                                <h1 class="display-1">Bootcamp</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.<br> Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
+                        <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
