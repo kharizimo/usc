@@ -39,7 +39,13 @@
                     <a href="contact" class="nav-item nav-link <?= $title=='Contact'?'active':''?>">Contact</a>
                 </div>
                 <div class="d-none d-lg-flex">
-                    <a class="btn btn-outline-primary border-2" href="login">Connexion</a>
+                    <?php if(isset($_SESSION['user-id'])): ?>
+                    <a class="btn btn-outline-primary border-2" href="user">ESPACE ADMIN</a>
+                    <?php elseif(isset($_SESSION['client-id'])): ?>
+                    <a class="btn btn-outline-primary border-2" href="client">ESPACE CLIENT</a>
+                    <?php else: ?>
+                    <a class="btn btn-outline-primary border-2" href="login">CONNEXION</a>
+                    <?php endif ?>
                 </div>
             </div>
         </nav>

@@ -1,4 +1,19 @@
 <?php 
+// engine
+if($_a=='action'){
+    $sql="select id from client where email='$email' and pwd='$pwd' and etat=true";
+    $id=$cn->query($sql)->fetch(PDO::FETCH_OBJ)->id;
+    if($id){
+        $_SESSION['client-id']=$id;
+        $_l='';
+    }else{$_l='login?err';}
+}
+
+if(isset($_l)){
+    header("location:../$_l");
+    exit;
+}
+
 $title="Login"
 ?>
 <!-- Contact Start -->

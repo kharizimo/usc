@@ -15,7 +15,7 @@ $pair=false;
                     </div>
                 </div>
             </div>
-            <?php foreach($row as $rows):  ?>
+            <?php foreach($rows as $r):  ?>
             <div class="service-item service-item-<?= ($pair!=$pair)?'right':'left' ?>">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">

@@ -2,6 +2,7 @@
 require 'config.php';
 
 $title="A propos";
+$_c=$_c?:'index';
 
 $url=is_file("pages/$_c.php")?"pages/$_c.php":"pages/404.php";
 ob_start();require $url;
