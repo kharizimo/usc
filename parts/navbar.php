@@ -11,7 +11,7 @@
                     <a href="./" class="nav-item nav-link <?= $title==''?'active':''?>">Accueil</a>
                     <a href="about" class="nav-item nav-link <?= $title=='A propos'?'active':''?>">A propos</a>
                     <a href="blog" class="nav-item nav-link <?= $title=='Blog'?'active':''?>">Blog</a>
-                    <a href="agenda" class="nav-item nav-link <?= $title=='Agenda'?'active':''?>">Agenda</a>
+                    <a href="sessions" class="nav-item nav-link <?= $title=='Sessions'?'active':''?>">Sessions</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle <?= $title=='Services'?'active':''?>" data-bs-toggle="dropdown">Services</a>
                         <div class="dropdown-menu m-0">

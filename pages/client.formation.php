@@ -1,3 +1,7 @@
+<?php  
+$sq="select * from session s join formation f on s.formation_id=f.id join classe c on c.client_id={$_SESSION['client-id']}";
+$r=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+?>
 <table class="table">
     <tr>
         <th>Formation</th>

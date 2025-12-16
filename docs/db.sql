@@ -5,6 +5,7 @@ use usc;
 create table client(
     id serial primary key,
     nom varchar(100),
+    telephone varchar(100),
     email varchar(100),
     pwd varchar(100),
     create_at datetime default current_timestamp,
@@ -34,23 +35,26 @@ create table categorie(
     id serial primary key,
     lib varchar(100),
 );
-create table slide(
-    id serial primary key,
-    titre varchar(100),
-    surtitre varchar(100),
-    texte varchar(100),
-    img varchar(100),
-    lien_url varchar(100),
-    lien_text varchar(100)
-);
 create table formation(
     id serial primary key,
     categorie_id int references categorie(id),
+    lib varchar(100)
+);
+create table session(
+    id serial primary key,
+    formation_id int references formation(id),
     lib varchar(100),
     lancement date default null,
     prix double default 0.0,
     etat varchar(100) default 'En attente',
+    detail text,
     visible boolean default true,
     subscribe boolean default true,
     create_at datetime default current_timestamp
+);
+create table classe(
+    session_id int references session(id),
+    client_id int references client(id),
+    create_at datetime default current_timestamp,
+    etat boolean default false
 );

@@ -1,5 +1,5 @@
 <?php 
-$title='Agenda'
+$title='Sessions'
  ?>
 <!-- Team Start -->
     <div class="container-fluid py-5 bg-secondary">

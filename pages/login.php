@@ -8,6 +8,10 @@ if($_a=='action'){
         $_l='';
     }else{$_l='login?err';}
 }
+if($_a=='logout'){
+    unset($_SESSION['client-id']);
+    $_l='login';
+}
 
 if(isset($_l)){
     header("location:../$_l");
@@ -30,18 +34,18 @@ $title="Login"
                 <h4 class="lh-base mb-4">Vous n'êtes pas encore membre ? Inscrivez-vous dès maintenant ! <a href="register">Cliquez ici pour nous rejoindre</a></h4>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form action="login/action" method="post">
                     <div class="row g-3">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="email" class="form-control bg-secondary border-0" id="email"
+                                <input type="email" class="form-control bg-secondary border-0" name="email"
                                     placeholder="Votre Email">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="password" class="form-control bg-secondary border-0" id="password"
+                                <input type="password" class="form-control bg-secondary border-0" name="pwd"
                                     placeholder="Mot de passe">
                                 <label for="password">Mot de passe</label>
                                 <!-- <input type="password" name="password" id="Mot de passe"> -->

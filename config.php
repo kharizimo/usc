@@ -5,7 +5,6 @@ extract($_REQUEST);
 
 $_c??='';
 $_a??='';
-$_l??='';
 
 $db=(object)[
     'host'=>'localhost',
