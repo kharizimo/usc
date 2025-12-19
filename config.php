@@ -12,12 +12,12 @@ $db=(object)[
     'user'=>'root',
     'pass'=>''
 ];
-/** online **
+/** online unive2718265 **/
 $db=(object)[
     'host'=>'localhost',
-    'name'=>'usc',
-    'user'=>'root',
-    'pass'=>''
+    'name'=>'unive2718265',
+    'user'=>'unive2718265',
+    'pass'=>'Admin@1234567890'
 ];
 
 /* end */ 

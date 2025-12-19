@@ -5,7 +5,7 @@ if($_a=='action'){
     $id=$cn->query($sql)->fetch(PDO::FETCH_OBJ)->id;
     if($id){
         $_SESSION['client-id']=$id;
-        $_l='';
+        $_l='./';
     }else{$_l='login?err';}
 }
 if($_a=='logout'){
@@ -14,7 +14,7 @@ if($_a=='logout'){
 }
 
 if(isset($_l)){
-    header("location:../$_l");
+    header("location:$_l");
     exit;
 }
 
@@ -34,7 +34,8 @@ $title="Login"
                 <h4 class="lh-base mb-4">Vous n'êtes pas encore membre ? Inscrivez-vous dès maintenant ! <a href="register">Cliquez ici pour nous rejoindre</a></h4>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form action="login/action" method="post">
+                <form action="login" method="post">
+                    <input type="hidden" name="_a" value="action">
                     <div class="row g-3">
                         <div class="col-md-12">
                             <div class="form-floating">
