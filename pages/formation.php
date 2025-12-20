@@ -1,14 +1,14 @@
 <?php 
 $title="Formations";
 $img=[
-    'init_info'=>'img/about.png',
-    'bureautique'=>'img/about.png',
-    'secretariat'=>'img/about.png',
-    'management'=>'img/about.png',
-    'logiciel'=>'img/about.png',
-    'web'=>'img/about.png',
-    'mobile'=>'img/about.png',
-    'database'=>'img/about.png',
+    'init_info'=>'img/about-1.jpg',
+    'bureautique'=>'img/about-1.jpg',
+    'secretariat'=>'img/about-1.jpg',
+    'management'=>'img/about-1.jpg',
+    'logiciel'=>'img/about-1.jpg',
+    'web'=>'img/about-1.jpg',
+    'mobile'=>'img/about-1.jpg',
+    'database'=>'img/about-1.jpg',
 ];
 ?>
 <div class="container-fluid bg-secondary px-0">

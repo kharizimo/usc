@@ -20,7 +20,7 @@ $pair=false;
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/blog/blog-1.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">

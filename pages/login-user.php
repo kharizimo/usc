@@ -1,5 +1,18 @@
 <?php 
-$title="Login"
+$title="Loign Admin";
+if($_a=='action'){
+    $sql="select id from user where email='$email' and pwd='$pwd' and etat=true";
+    $id=$cn->query($sql)->fetch(PDO::FETCH_OBJ)->id;
+    if($id){
+        $_SESSION['user-id']=$id;
+        header('location:user');
+        exit;
+        }
+        else{
+            header('location:login-user?err');
+            exit;
+        }
+}
 ?>
 <!-- Contact Start -->
 <div class="container-fluid py-5">
@@ -15,18 +28,19 @@ $title="Login"
                 <h4 class="lh-base mb-4">Vous n'êtes pas encore membre ? Inscrivez-vous dès maintenant ! <a href="register">Cliquez ici pour nous rejoindre</a></h4>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form action="login-user" method="post">
+                    <input type="hidden" name="_a" value="action">
                     <div class="row g-3">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="email" class="form-control bg-secondary border-0" id="email"
+                                <input type="email" class="form-control bg-secondary border-0" name="email"
                                     placeholder="Votre Email">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="password" class="form-control bg-secondary border-0" id="password"
+                                <input type="password" class="form-control bg-secondary border-0" name="pwd"
                                     placeholder="Mot de passe">
                                 <label for="password">Mot de passe</label>
                                 <!-- <input type="password" name="password" id="Mot de passe"> -->

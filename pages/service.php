@@ -1,12 +1,12 @@
 <?php 
 $title="Services";
 $img=[
-    'gestion_projet'=>'img/about.png',
-    'voyage'=>'img/about.png',
-    'logement'=>'img/about.png',
-    'logiciel'=>'img/about.png',
-    'siteweb'=>'img/about.png',
-    'coaching'=>'img/about.png',
+    'gestion_projet'=>'img/about-1.jpg',
+    'voyage'=>'img/about-1.jpg',
+    'logement'=>'img/about-1.jpg',
+    'logiciel'=>'img/about-1.jpg',
+    'siteweb'=>'img/about-1.jpg',
+    'coaching'=>'img/about-1.jpg',
 ];
 ?>
 <div class="container-fluid bg-secondary px-0">
