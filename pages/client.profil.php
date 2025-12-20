@@ -3,20 +3,18 @@ if($_a=='update'){
     if($pwd==$confirm){
         $sql="update client set nom='$nom',telephone='$telephone',email='$email',pwd='$pwd' where id={$_SESSION['client-id']}";
         $cn->exec($sql);
-        $_l='client';
+        header('location:client');
+        exit;
 
-    }else{$_l='client?err';}
-}
-if(isset($_l)){
-    header("location:../$_l");
-    exit;
+    }
 }
 
 
 $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch();
 ?>
 <?= isset($err)?'<p class="text-center text-danger text-bold">Mot de passe incorrect</p>':'' ?>
-<form action="client/update">
+<form action="client">
+    <input type="hidden" name="_a" value="update">
     <div class="row g-3">
         <div class="col-md-12">
             <div class="form-floating">
@@ -54,7 +52,7 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
             </div>
         </div>
         <div class="col-12">
-            <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Connecter</button>
+            <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Mettre à jour</button>
         </div>
     </div>
 </form>

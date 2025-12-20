@@ -1,9 +1,9 @@
-drop database if exists usc;
-create database usc;
-use usc;
+-- drop database if exists usc;
+-- create database usc;
+-- use usc;
 
 create table client(
-    id serial primary key,
+    id integer primary key autoincrement,
     nom varchar(100),
     telephone varchar(100),
     email varchar(100),
@@ -12,14 +12,14 @@ create table client(
     etat boolean default true
 );
 create table user(
-    id serial primary key,
+    id integer primary key autoincrement,
     nom varchar(100),
     email varchar(100),
     pwd varchar(100),
     etat boolean default false
 );
 create table blog(
-    id serial primary key,
+    id integer primary key autoincrement,
     titre varchar(100),
     extrait text,
     texte text,
@@ -28,29 +28,29 @@ create table blog(
     create_at datetime default current_timestamp
 );
 create table newsletters(
-    id serial primary key,
+    id integer primary key autoincrement,
     email varchar(100)
 );
 create table service(
-    id serial primary key,
+    id integer primary key autoincrement,
     lib varchar(100),
     content text,
     img varchar(100) default 'img/service.jpg'
 );
 create table categorie(
-    id serial primary key,
+    id integer primary key autoincrement,
     lib varchar(100),
     content text,
     img varchar(100) default 'img/categorie.jpg'
 );
 create table formation(
-    id serial primary key,
+    id integer primary key autoincrement,
     categorie_id int references categorie(id),
     lib varchar(100),
     img varchar(100) default 'formation.jpg'
 );
 create table session(
-    id serial primary key,
+    id integer primary key autoincrement,
     formation_id int references formation(id),
     lib varchar(100),
     lancement date default null,

@@ -23,7 +23,7 @@ $db=(object)[
 /* end */ 
 
 try{
-    $cn=new PDO("mysql:host=$db->host;dbname=$db->name;charset=utf8",$db->user,$db->pass);
+    $cn=new PDO("sqlite:db.sqlite");
 }
 catch(PDOException $e){
     die("Erreur de connexion à la base de données : ".$e->getMessage());
