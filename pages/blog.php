@@ -15,85 +15,44 @@ $pair=false;
                     </div>
                 </div>
             </div>
-            <?php foreach($rows as $r):  ?>
-            <div class="service-item service-item-<?= ($pair!=$pair)?'right':'left' ?>">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/blog/blog-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-bold">Card title</h5>
+                        <p class="card-text d-flex justify-content-between">
+                            <span>Author</span>
+                            <small class="d-block">2025-12-11 12:11:11</small>
+                        </p>
+                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
+                      </div>
                     </div>
                 </div>
-            </div>
-            <?php endforeach ?>
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Corporate Events</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-bold">Card title</h5>
+                        <p class="card-text d-flex justify-content-between">
+                            <span>Author</span>
+                            <small class="d-block">2025-12-11 12:11:11</small>
+                        </p>
+                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
+                      </div>
                     </div>
                 </div>
-            </div>
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-3.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Commercial Photo Shots</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-4.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Professional Modeling</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+                <div class="col-md-4">
+                    <div class="card bg-secondary">
+                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title text-bold">Card title</h5>
+                        <p class="card-text d-flex justify-content-between">
+                            <span>Author</span>
+                            <small class="d-block">2025-12-11 12:11:11</small>
+                        </p>
+                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
+                      </div>
                     </div>
                 </div>
             </div>

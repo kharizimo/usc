@@ -27,10 +27,6 @@ create table blog(
     user_id int references user(id),
     create_at datetime default current_timestamp
 );
-create table newsletters(
-    id integer primary key autoincrement,
-    email varchar(100)
-);
 create table service(
     id integer primary key autoincrement,
     lib varchar(100),
@@ -68,4 +64,9 @@ create table classe(
     client_id int references client(id),
     create_at datetime default current_timestamp,
     etat boolean default false
+);
+
+create table newsletters(
+    email varchar(100) primary key,
+    create_at datetime default current_timestamp
 );
