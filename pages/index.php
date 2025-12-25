@@ -2,7 +2,7 @@
  <?php 
  $title=''
  ?>
-   <div class="container-fluid py-5">
+<div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -48,45 +48,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card bg-secondary">
-                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-bold">Card title</h5>
-                        <p class="card-text d-flex justify-content-between">
-                            <span>Author</span>
-                            <small class="d-block">2025-12-11 12:11:11</small>
-                        </p>
-                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-secondary">
-                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-bold">Card title</h5>
-                        <p class="card-text d-flex justify-content-between">
-                            <span>Author</span>
-                            <small class="d-block">2025-12-11 12:11:11</small>
-                        </p>
-                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-secondary">
-                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-bold">Card title</h5>
-                        <p class="card-text d-flex justify-content-between">
-                            <span>Author</span>
-                            <small class="d-block">2025-12-11 12:11:11</small>
-                        </p>
-                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
-                      </div>
-                    </div>
-                </div>
+                <?php 
+                $sql="select * from v_blog limit 3";
+                $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+                foreach($rows as $row){
+                    echo '<div class="col-md-4">'.blog_item($row).'</div>';
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -117,10 +85,41 @@
         </div>
     </div>
     <!-- Banner End -->
-
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>Services</h5>
+                        <h1>How We Help You</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-left">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="img/service-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">Fashion Shows</h3>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
+                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
+                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
+                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Team Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 bg-secondary">
         <div class="container py-5">
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -131,106 +130,15 @@
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-body">
-                            <div class="team-before">
-                                <span>Date</span>
-                                <span>Prix</span>
-                                <span>Statut</span>
-                            </div>
-                            <img class="img-fluid" src="img/sessions/session-1.jpg" alt="">
-                            <div class="team-after">
-                                <span>-</span>
-                                <span>100 $</span>
-                                <span>En cours</span>
-                            </div>
-                        </div>
-                        <a class="team-name" href="#">
-                            <h5 class="text-uppercase mb-0">JAVA SE Basic</h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-body">
-                            <div class="team-before">
-                                <span>Date</span>
-                                <span>Prix</span>
-                                <span>Statut</span>
-                            </div>
-                            <img class="img-fluid" src="img/sessions/session-1.jpg" alt="">
-                            <div class="team-after">
-                                <span>-</span>
-                                <span>100 $</span>
-                                <span>En cours</span>
-                            </div>
-                        </div>
-                        <a class="team-name" href="#">
-                            <h5 class="text-uppercase mb-0">JAVA SE Basic</h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-body">
-                            <div class="team-before">
-                                <span>Date</span>
-                                <span>Prix</span>
-                                <span>Statut</span>
-                            </div>
-                            <img class="img-fluid" src="img/sessions/session-1.jpg" alt="">
-                            <div class="team-after">
-                                <span>-</span>
-                                <span>100 $</span>
-                                <span>En cours</span>
-                            </div>
-                        </div>
-                        <a class="team-name" href="#">
-                            <h5 class="text-uppercase mb-0">JAVA SE Basic</h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-body">
-                            <div class="team-before">
-                                <span>Date</span>
-                                <span>Prix</span>
-                                <span>Statut</span>
-                            </div>
-                            <img class="img-fluid" src="img/sessions/session-1.jpg" alt="">
-                            <div class="team-after">
-                                <span>-</span>
-                                <span>100 $</span>
-                                <span>En cours</span>
-                            </div>
-                        </div>
-                        <a class="team-name" href="#">
-                            <h5 class="text-uppercase mb-0">JAVA SE Basic</h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-body">
-                            <div class="team-before">
-                                <span>Date</span>
-                                <span>Prix</span>
-                                <span>Statut</span>
-                            </div>
-                            <img class="img-fluid" src="img/sessions/session-1.jpg" alt="">
-                            <div class="team-after">
-                                <span>-</span>
-                                <span>100 $</span>
-                                <span>En cours</span>
-                            </div>
-                        </div>
-                        <a class="team-name" href="#">
-                            <h5 class="text-uppercase mb-0">JAVA SE Basic</h5>
-                        </a>
-                    </div>
-                </div>
+                <?php 
+                $sql="select * from v_formation limit 3";
+                $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+                foreach($rows as $row){
+                    echo '<div class="col-md-4">';
+                    echo formation_item($row);
+                    echo '</div>';
+                }
+                 ?>
             </div>
         </div>
     </div>

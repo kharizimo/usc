@@ -16,45 +16,13 @@ $pair=false;
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card bg-secondary">
-                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-bold">Card title</h5>
-                        <p class="card-text d-flex justify-content-between">
-                            <span>Author</span>
-                            <small class="d-block">2025-12-11 12:11:11</small>
-                        </p>
-                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-secondary">
-                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-bold">Card title</h5>
-                        <p class="card-text d-flex justify-content-between">
-                            <span>Author</span>
-                            <small class="d-block">2025-12-11 12:11:11</small>
-                        </p>
-                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-secondary">
-                      <img src="img/blog/blog-1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-bold">Card title</h5>
-                        <p class="card-text d-flex justify-content-between">
-                            <span>Author</span>
-                            <small class="d-block">2025-12-11 12:11:11</small>
-                        </p>
-                        <a href="#" class="text-warning">Lire plus <span class="fa fa-arrow-right"></span></a>
-                      </div>
-                    </div>
-                </div>
+                <?php 
+                $sql="select * from v_blog";
+                $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+                foreach($rows as $row){
+                    echo '<div class="col-md-4">'.blog_item($row).'</div>';
+                }
+                ?>
             </div>
         </div>
     </div>

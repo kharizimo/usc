@@ -1,5 +1,6 @@
 <?php 
 require 'config.php';
+require 'function.php';
 
 $title="A propos";
 $_c=$_c?:'index';

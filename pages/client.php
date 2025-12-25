@@ -1,6 +1,10 @@
 <?php 
 $title="Espace client";
 $_s??='profil';
+if($_a=='logout'){
+    unset($_SESSION['client-id']);
+    header('location:login');
+}
 ?>
 <!-- Contact Start -->
     <div class="container-fluid py-5">
@@ -14,9 +18,9 @@ $_s??='profil';
                         </div>
                     </div>
                     <table class="table table-dark mb-0 wow fadeInUp" data-wow-delay="0.3s">
-                        <tr><td><a href="client">Information personnelles</a></td></tr>
-                        <tr><td><a href="client?_s=formation">Mes Formations</a></td></tr>
-                        <tr><td><a href="login/logout">Deconnexion</a></td></tr>
+                        <tr><td><a href="">Information personnelles</a></td></tr>
+                        <tr><td><a href="?_s=formation">Mes Formations</a></td></tr>
+                        <tr><td><a href="?_a=logout">Deconnexion</a></td></tr>
                     </table>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
