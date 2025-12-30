@@ -6,7 +6,8 @@ if($_a=='action'){
     if($id){
         $_SESSION['client-id']=$id;
         $_l='./';
-    }else{$_l='login?err';}
+        if($f_id){$_l="session-single?id=$f_id";}
+    }else{$_l='login?err'.($f_id?"&f_id=$f_id":'');}
 }
 if($_a=='logout'){
     unset($_SESSION['client-id']);

@@ -44,14 +44,14 @@ create table formation(
     id integer primary key autoincrement,
     categorie_id int references categorie(id),
     lib varchar(100),
-    detail text,
+    texte text,
     formation_date date default null,
     prix double default 0.0,
     etat varchar(100) default 'Disponible',
     create_at datetime default current_timestamp,
     visible boolean default true,
     img varchar(100) default 'formation.jpg',
-    screenshot text
+    screenshot text default 'formation.jpg;formation.jpg;formation.jpg'
 );
 create view v_formation as 
 select f.* ,c.lib categorie_lib
@@ -61,8 +61,7 @@ join categorie c on f.categorie_id=c.id;
 create table formation_client(
     formation_id int references formation(id),
     client_id int references client(id),
-    create_at datetime,
-    suscribe boolean default false,
+    create_at datetime default current_timestamp,
     confirm boolean default false
 );
 

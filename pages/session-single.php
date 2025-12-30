@@ -1,21 +1,55 @@
 <?php 
-$title="Services"
+if($_a=='action'){
+    $sql="insert into formation_client(formation_id,client_id) values($formation_id,$client_id)";
+    $cn->exec($sql);
+    header("location:session");
+}
+$title="Services";
+$sql="select * from v_formation where id=$id";
+$r=$cn->query($sql)->fetch(PDO::FETCH_OBJ);
+$screenshots=explode(';',$r->screenshot);
+
+$suscrib_url="login?f_id=$id";
+$suscrib_value='Soucrire à la formation';
+if(isset($_SESSION['client-id'])){
+    $sql="select * from formation_client where client_id={$_SESSION['client-id']} and formation_id=$id";
+    $suscrib_url="session-single?_a=suscribe&id=$id";
+    if($r=$cn->query($sql)->fetch(PDO::FETCH_OBJ)){
+        $suscrib_url='#';
+        $suscrib_value='En attente de confirmation';
+        if($r->confirm){
+            $suscrib_url='#';
+            $suscrib_value='Souscription confirmé';
+        }
+    }
+}
+
 ?>
-<div class="container-fluid bg-secondary px-0">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
-                <img class="img-fluid" src="img/about.png" alt="">
-            </div>
-            <div class="col-lg-7 pb-0 pb-lg-5 py-5">
-                <div class="pb-0 pb-lg-5 py-5">
-                    <h3 class="text-uppercase">Nos objectifs</h3>
-                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">Tempor erat elitr rebum at clita. Diam dolor
-                        diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                        lorem sit clita duo justo magna dolore erat amet. Stet no et lorem dolor et diam, amet duo
-                        ut dolore vero eos.</p>
-                </div>
-            </div>
+<div class="container my-5"><div class="row">
+    <div class="col-md-6">
+        <img src="img/<?=$r->img?>" alt="" class="w-100 rounded">
+        <p class="lead text-muted fw-bold mt-3"><?=$r->categorie_lib?> </p>
+        <h2><?=$r->prix?> USD</h2>
+        <hr>
+        <table class="table">
+            <tr><td>Début de formation</td><td class="text-end"><?=$r->formation_date?></td></tr>
+            <tr><td>Etat</td><td class="text-end fw-bold text-warning"><?=$r->etat?></td></tr>
+        </table>
+        
+        <div class="mt-4 text-end">
+            <a href="<?=$suscrib_url?>" class="btn btn-success"><?=$suscrib_value?></a>
+        </div>
+        <hr>
+        <div class="row g-4">
+            <?php foreach($screenshots as $item): ?>
+            <div class="col-md-4 col-sm-6">
+                <img src="img/<?=$item?>" alt="" class="w-100 rounded">
+            </div>    
+            <?php endforeach?>
         </div>
     </div>
-</div>
+    <div class="col-md">
+        <h2><?=$r->lib?></h2>
+        <p class=""><?=$r->texte?></p>
+    </div>
+</div></div>
