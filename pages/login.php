@@ -37,6 +37,7 @@ $title="Login"
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <form action="login" method="post">
                     <input type="hidden" name="_a" value="action">
+                    <input type="hidden" name="f_id" value="<?=$f_id?>">
                     <div class="row g-3">
                         <div class="col-md-12">
                             <div class="form-floating">
