@@ -1,8 +1,10 @@
 <?php 
 if($_a=='action'){
+    $client_id=$_SESSION['client-id'];
+    $formation_id=$id;
     $sql="insert into formation_client(formation_id,client_id) values($formation_id,$client_id)";
     $cn->exec($sql);
-    header("location:session");
+    header("location:sessions");
 }
 $title="Services";
 $sql="select * from v_formation where id=$id";
@@ -13,11 +15,11 @@ $suscrib_url="login?f_id=$id";
 $suscrib_value='Soucrire à la formation';
 if(isset($_SESSION['client-id'])){
     $sql="select * from formation_client where client_id={$_SESSION['client-id']} and formation_id=$id";
-    $suscrib_url="session-single?_a=suscribe&id=$id";
-    if($r=$cn->query($sql)->fetch(PDO::FETCH_OBJ)){
+    $suscrib_url="session-single?_a=action&id=$id";
+    if($rs=$cn->query($sql)->fetch(PDO::FETCH_OBJ)){
         $suscrib_url='#';
         $suscrib_value='En attente de confirmation';
-        if($r->confirm){
+        if($rs->confirm){
             $suscrib_url='#';
             $suscrib_value='Souscription confirmé';
         }

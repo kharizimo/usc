@@ -1,5 +1,20 @@
 <?php 
-$title="Contact"
+$title="Contact";
+
+if($_a=='action'){
+    $headers = "From: $email" . "\r\n";
+    $headers .= "Content-Type: text/plain; charset=utf-8";
+    $msg=<<<EOT
+    Nom : $nom \r\n
+    Email : $email\r\n
+    Sujet : $sujet\r\n
+    \r\n_______________________________\r\n\n
+    $message
+
+EOT;
+    mail($app->email,$sujet,$message,$headers);
+    header('location:contact-success');
+}
 ?>
 <!-- Contact Start -->
     <div class="container-fluid py-5">
@@ -38,25 +53,26 @@ $title="Contact"
                     </table>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="engine/common/contact" method="post" class="<?= isset($success)?'d-none':'' ?>"> 
+                    <form action="" method="post" class="<?= isset($success)?'d-none':'' ?>"> 
+                        <input type="hidden" name="_a" value="action">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-secondary border-0" id="nom"
+                                    <input type="text" class="form-control bg-secondary border-0" name="nom"
                                         placeholder="Votre nom">
                                     <label for="name">Votre nom</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-secondary border-0" id="email"
+                                    <input type="email" class="form-control bg-secondary border-0" name="email"
                                         placeholder="Adresse mail">
                                     <label for="email">Acresse mail</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-secondary border-0" id="sujet"
+                                    <input type="text" class="form-control bg-secondary border-0" name="sujet"
                                         placeholder="Sujet">
                                     <label for="subject">Sujet</label>
                                 </div>
@@ -64,7 +80,7 @@ $title="Contact"
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control bg-secondary border-0"
-                                        placeholder="Laissez un message" id="message"
+                                        placeholder="Laissez un message" name="message"
                                         style="height: 150px"></textarea>
                                     <label for="message">Message</label>
                                 </div>

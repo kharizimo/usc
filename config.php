@@ -6,18 +6,14 @@ extract($_REQUEST);
 $_c??='';
 $_a??='';
 
-$db=(object)[
-    'host'=>'localhost',
-    'name'=>'usc',
-    'user'=>'root',
-    'pass'=>''
-];
-/** online unive2718265 **/
-$db=(object)[
-    'host'=>'localhost',
-    'name'=>'unive2718265',
-    'user'=>'unive2718265',
-    'pass'=>'Admin@1234567890'
+$app=(object)[
+    'email'=>'me@gmail.com',
+    'telephone'=>'+243823455672',
+    'adresse'=>'123 Avenue des Champs, Kinshasa, RDC',
+    'facebook'=>'#',
+    'x'=>'#',
+    'linkedin'=>'#',
+    'youtube'=>'#',
 ];
 
 /* end */ 
