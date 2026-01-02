@@ -15,7 +15,7 @@ $img=[
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
                     <div class="title-center">
                         <h5>Services</h5>
-                        <h1>How We Help You</h1>
+                        <h1>Se que nous offrons</h1>
                     </div>
                 </div>
             </div>
@@ -28,13 +28,15 @@ $img=[
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            <h3 class="text-uppercase">Formation professionnelles</h3>
+                            <p class="mb-4">
+                                <b>Maîtrisez l'architecture du futur</b><br>
+                                Du développement web (PHP, JavaScript) à la gestion de bases de données, apprenez à concevoir des solutions robustes. Nos ateliers vous plongent dans le code pour transformer vos idées en applications fonctionnelles et performantes. <br><br>
+                                <b>Devenez le moteur de votre équipe</b><br>
+                                Piloter un projet, motiver ses collaborateurs et prendre des décisions stratégiques : le management est un art qui s'apprend. Nos formations vous préparent à relever les défis humains et opérationnels des entreprises d'aujourd'hui. <br><br>
+                                <b>L'excellence au cœur de l'organisation</b><br>
+                                Maillon essentiel de toute structure, développez des compétences polyvalentes : gestion administrative, accueil professionnel, communication digitale et organisation d'événements. Devenez l'expert(e) sur qui l'on peut compter.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -48,13 +50,16 @@ $img=[
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Corporate Events</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            <h3 class="text-uppercase">Consulting Informatique</h3>
+                            <p class="mb-4">
+                                <b>Votre vision, notre expertise technologique</b><br>
+                                Dans un environnement numérique en constante évolution, le choix de vos outils est décisif. Nous accompagnons les entreprises dans leur transformation digitale : audit de systèmes, conseil en architecture logicielle et optimisation de flux de travail. Ensemble, bâtissons une infrastructure informatique alignée sur vos objectifs de croissance.
+                                <ul>
+                                    <li>audit de systèmes</li>
+                                    <li>conseil en architecture logicielle</li>
+                                    <li>optimisation de flux de travail</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -68,13 +73,11 @@ $img=[
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Commercial Photo Shots</h3>
+                            <h3 class="text-uppercase">Gestion des immobiliers</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +91,7 @@ $img=[
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Professional Modeling</h3>
+                            <h3 class="text-uppercase">Agro pastorale</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
@@ -105,8 +108,6 @@ $img=[
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>

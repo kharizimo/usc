@@ -13,7 +13,7 @@ if($_a=='action'){
 
 EOT;
     mail($app->email,$sujet,$message,$headers);
-    header('location:contact-success');
+    header('location:contact?success');
 }
 ?>
 <!-- Contact Start -->
@@ -31,23 +31,23 @@ EOT;
                     <table class="table table-dark mb-0 wow fadeInUp" data-wow-delay="0.3s">
                         <tr>
                             <td>TELEPHONE</td>
-                            <td>+0123456789</td>
+                            <td><?=$app->telephone ?></td>
                         </tr>
                         <tr>
                             <td>E-MAIL</td>
-                            <td>info@example.com</td>
+                            <td><?= $app->email?></td>
                         </tr>
                         <tr>
                             <td>ADDRESS</td>
-                            <td>123 Avenue des Champs, Kinshasa, RDC</td>
+                            <td><?= $app->adresse?></td>
                         </tr>
                         <tr class="border-dark">
                             <td>SUIVEZ-NOUS</td>
                             <td>
-                                <a class="me-1" href="#!"><i class="fab fa-x-twitter"></i></a>
-                                <a class="me-1" href="#!"><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-1" href="#!"><i class="fab fa-youtube"></i></a>
-                                <a class="me-1" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-1" href="<?= $app->x ?>"><i class="fab fa-twitter"></i></a>
+                                <a class="me-1" href="<?= $app->facebook ?>"><i class="fab fa-facebook-f"></i></a>
+                                <a class="me-1" href="<?= $app->youtube ?>"><i class="fab fa-youtube"></i></a>
+                                <a class="me-1" href="<?= $app->linkedin ?>"><i class="fab fa-linkedin-in"></i></a>
                             </td>
                         </tr>
                     </table>
@@ -96,7 +96,7 @@ EOT;
                             Votre message est envoyé avec succès. <br/>
                             Nous vous reviendrons dans le plus bref délai.
                         </p>
-                        <button class="btn btn-outline-primary px-5 mt-5">Page d'accueil</button>
+                        <a class="btn btn-outline-primary px-5 mt-5" href="./">Page d'accueil</a>
                     </div>
                 </div>
             </div>

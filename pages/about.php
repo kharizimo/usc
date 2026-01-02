@@ -6,8 +6,8 @@ $title="A propos";
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
                     <div class="title-center">
-                        <h5>Services</h5>
-                        <h1>How We Help You</h1>
+                        <h5>A propos</h5>
+                        <h1>bon choix !</h1>
                     </div>
                 </div>
             </div>
@@ -20,13 +20,12 @@ $title="A propos";
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
+                            <h3 class="text-uppercase">Qui sommes-nous</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -40,13 +39,12 @@ $title="A propos";
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Corporate Events</h3>
+                            <h3 class="text-uppercase">Nos objectifs</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -60,13 +58,12 @@ $title="A propos";
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Commercial Photo Shots</h3>
+                            <h3 class="text-uppercase">Nos methodes</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -80,7 +77,7 @@ $title="A propos";
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Professional Modeling</h3>
+                            <h3 class="text-uppercase">Nos experts</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
@@ -97,8 +94,6 @@ $title="A propos";
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>

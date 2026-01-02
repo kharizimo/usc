@@ -7,8 +7,8 @@
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
                     <div class="title-center">
-                        <h5>Services</h5>
-                        <h1>How We Help You</h1>
+                        <h5>Bienvenue</h5>
+                        <h1>Boostez Votre carrière</h1>
                     </div>
                 </div>
             </div>
@@ -21,12 +21,9 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
+                            <h3 class="text-uppercase">Propulsez votre carrière avec les compétences de demain</h3>
+                            <p class="mb-4">Des formations en ligne intensives, guidées par des experts, pour maîtriser les technologies les plus demandées du marché.</p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="about">En savoir plus <i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
@@ -91,7 +88,7 @@
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
                     <div class="title-center">
                         <h5>Services</h5>
-                        <h1>How We Help You</h1>
+                        <h1>Expertise Métier</h1>
                     </div>
                 </div>
             </div>
@@ -104,12 +101,13 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
+                            <h3 class="text-uppercase">Expertise à portée de main</h3>
+                            <p class="mb-4">
+                                <b>Des compétences concrètes pour transformer vos idées en projets réels.</b><br>
+                                Du débutant à l'expert : des parcours sur mesure pour chaque étape de votre progression. <br>
+                                Apprenez. Pratiquez. Réussissez. Nos ateliers intensifs pour ne plus perdre de temps
+                            </p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="about">En savoir plus <i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>

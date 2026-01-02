@@ -4,14 +4,14 @@
             <h1 class="display-4 mb-3 text-white text-uppercase">USC</h1>
         </a>
         <div class="d-flex justify-content-center mb-4">
-            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!">
+            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="<?= $app->x ?>">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
+            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="<?= $app->facebook ?>"><i
                     class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
+            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="<?= $app->youtube ?>"><i
                     class="fab fa-youtube"></i></a>
-            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
+            <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="<?= $app->linkedin ?>"><i
                     class="fab fa-linkedin-in"></i></a>
             <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="login-user"><i
                     class="fa fa-user"></i></a>

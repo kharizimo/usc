@@ -1,4 +1,5 @@
 <?php 
+$f_id??='';
 // engine
 if($_a=='action'){
     $sql="select id from client where email='$email' and pwd='$pwd' and etat=true";
@@ -8,18 +9,16 @@ if($_a=='action'){
         $_l='./';
         if($f_id){$_l="session-single?id=$f_id";}
     }else{$_l='login?err'.($f_id?"&f_id=$f_id":'');}
-}
-if($_a=='logout'){
-    unset($_SESSION['client-id']);
-    $_l='login';
-}
-
-if(isset($_l)){
     header("location:$_l");
     exit;
 }
+if($_a=='logout'){
+    unset($_SESSION['client-id']);
+    header("location:login");
+    exit;
+}
 
-$title="Login"
+$title="Login";
 ?>
 <!-- Contact Start -->
 <div class="container-fluid py-5">
