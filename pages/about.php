@@ -15,7 +15,7 @@ $title="A propos";
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -34,7 +34,7 @@ $title="A propos";
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5 order-md-1 text-md-end">
                         <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-2.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -53,7 +53,7 @@ $title="A propos";
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-3.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -72,7 +72,7 @@ $title="A propos";
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5 order-md-1 text-md-end">
                         <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-4.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
