@@ -22,9 +22,9 @@ if($_a=='logout'){
                         <tr><td><a href="user">Profil</a></td></tr>
                         <tr><td><a href="user?_s=formation">Mes Formations</a></td></tr>
                         <tr><td><a href="user?_s=blog">Mes blogs</a></td></tr>
-                        <tr><td><a href="user?_s=blog">Clients</a></td></tr>
-                        <tr><td><a href="user?_s=blog">Utilisateurs</a></td></tr>
-                        <tr><td><a href="?_a=logout">Deconnexion</a></td></tr>
+                        <tr><td><a href="user?_s=clients">Clients</a></td></tr>
+                        <tr><td><a href="user?_s=users">Utilisateurs</a></td></tr>
+                        <tr><td><a href="user?_a=logout">Deconnexion</a></td></tr>
                     </table>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">

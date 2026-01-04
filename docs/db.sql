@@ -16,7 +16,7 @@ create table user(
     nom varchar(100),
     email varchar(100),
     pwd varchar(100),
-    etat boolean default false
+    etat boolean default true
 );
 create table blog(
     id integer primary key autoincrement,
