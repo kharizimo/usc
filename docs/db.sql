@@ -11,6 +11,11 @@ create table client(
     create_at datetime default current_timestamp,
     etat boolean default true
 );
+create view v_client as 
+select c.*,
+(select count(*) from formation_client f where f.client_id=c.id) nbr
+from client c;
+
 create table user(
     id integer primary key autoincrement,
     nom varchar(100),

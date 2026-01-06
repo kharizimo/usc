@@ -1,7 +1,14 @@
+<?php
+$row=(object)['img'=>'formation.jpg'];
+$action='insert';
+if($id){
+    $row=$cn->query("select * from v_formation where id=$id")->fetch(PDO::FETCH_OBJ);
+}
+?>
 <form>
     <div class="row g-3">
         <div class="col-md-6"><div class="form-floating">
-            <img src="img/team-3.jpg" style="max-height: 200px;" alt="">
+            <img src="img/<?= $row->img ?>" style="max-height: 200px;" alt="">
         </div></div>
         <div class="col-12">
             <div class="form-floating">
@@ -10,8 +17,13 @@
         </div>
         <div class="col-12">
             <div class="form-floating">
-                <select name="" id="" class="form-control bg-secondary border-0">
-                    
+                <select name="categorie_id" class="form-control bg-secondary border-0">
+                    <?= array_reduce($cn->query('select * from categorie', PDO::FETCH_OBJ)->fetchAll(),function($carry,$item){
+                        global $row;
+                        $selected='';
+                        if(isset($row->categorie->id)){if($row->categorie_id==$item->id){$selected='selected';}}
+                        return $carry."<option value=\"$item->id\" $selected>$item->lib";
+                    },'')?>
                 </select>
                 <label for="subject">Catégorie</label>
             </div>
@@ -19,7 +31,7 @@
         <div class="col-12">
             <div class="form-floating">
                 <input type="text" class="form-control bg-secondary border-0" id="subject"
-                    placeholder="Sujet">
+                    placeholder="Sujet" value="<?= $row->lib??'' ?>">
                 <label for="subject">Titre</label>
             </div>
         </div>
@@ -27,17 +39,19 @@
             <div class="form-floating">
                 <textarea class="form-control bg-secondary border-0"
                     placeholder="Laissez un message" id="message"
-                    style="height: 150px"></textarea>
+                    style="height: 300px"><?= $row->texte ?></textarea>
                 <label for="message">Contenu</label>
             </div>
         </div>
         <div class="col-12">
             <div class="form-floating">
                 <select name="" id="" class="form-control bg-secondary border-0">
-                    <option>En attente</option>
-                    <option>En cours</option>
-                    <option>Terminé</option>
-                    <option>Annulé</option>
+                    <?= array_reduce(['Disponible','En cours','Terminé','Annulé'],function($carry,$item){
+                        global $row;
+                        $selected='';
+                        if(isset($row->id)){if($row->categorie_etat==$item){$selected='selected';}}
+                        return $carry."<option>$item</option>";
+                    }) ?>
                 </select>
                 <label for="subject">Etat</label>
             </div>

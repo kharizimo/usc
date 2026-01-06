@@ -5,6 +5,7 @@ extract($_REQUEST);
 
 $_c??='';
 $_a??='';
+$id??=0;
 
 $app=(object)[
     'email'=>'me@gmail.com',
