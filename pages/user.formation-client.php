@@ -1,3 +1,11 @@
+<?php
+$sql=<<<txt
+select c.* from v_client c 
+join formation_client f on f.client_id=c.id
+where formation_id=$id
+txt;
+$rows=$cn->query($sql,PDO::FETCH_OBJ)->fetchAll();
+?>
 <table class="table">
     <thead><tr>
         <th>Nom</th>
@@ -5,7 +13,7 @@
         <th>Formations</th>
         <th width="1%"></th>
     </tr></thead>
-    <tbody><?= array_reduce($cn->query('select * from v_client',PDO::FETCH_OBJ)->fetchAll(),function($carry,$item){
+    <tbody><?= array_reduce($rows,function($carry,$item){
         return <<<item
         <tr>
             <td>$item->nom</td>

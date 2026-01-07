@@ -37,7 +37,6 @@ create view v_blog as
     u.nom as auteur
     from blog b
     join user u on b.user_id = u.id
-    where b.visible = true
     order by b.create_at desc;
 
 

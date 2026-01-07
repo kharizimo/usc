@@ -1,5 +1,11 @@
 <?php
-$sql="select *,(select count(*) from formation_client c where f.id=c.formation_id) nbr from v_formation f";
+$sql=<<<txt
+select f.*,
+(select count(*) from formation_client c where f.id=c.formation_id) nbr
+from v_formation f 
+join formation_client fc on fc.formation_id=f.id 
+where fc.client_id=$id
+txt;
 $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
 ?>
 <table class="table">
@@ -8,7 +14,7 @@ $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
         <th>Date</th>
         <th width="1%">Participants</th>
         <th width="1%">Etat</th>
-        <th width="1%"><a href="user?_s=formation-single">Ajouter</a></th>
+        <th width="1%"></th>
     </tr>
     <?php foreach($rows as $r): ?>
     <tr>
