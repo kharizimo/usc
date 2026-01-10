@@ -1,24 +1,22 @@
 <?php 
 if($_a=='update'){
-    $img_clause='';
-    if($image){
-        $img_clause=",img='$img'";
-    }
+    $img=upload_image($_FILES['image']);
+    $img_clause=$img?",img='$img'":'';
     $sql="update blog set titre='$titre',texte='$texte',visible='$visible' $img_clause where id=$id";
     $cn->exec($sql);
     header('location:user?_s=blog');exit;
 }
 if($_a=='delete'){
+    $img=$cn->query('select img from blog where id=$id',PDO::FETCH_OBJ)->fetch()->img;
+    unlink($root.$img);
     $cn->exec("delete from blog where id=$id");
     header('location:user?_s=blog');exit;
 }
 if($_a=='insert'){
-    $sql="insert into blog(titre,texte,visible,img,user_id) values('$titre','$texte','$visible','blog.jpg',{$_SESSION['user-id']})";
+    $img=upload_image($_FILES['image']);
+    $img=$img?$img:'blog.jpg';
+    $sql="insert into blog(titre,texte,visible,user_id,img) values('$titre','$texte','$visible',{$_SESSION['user-id']},'$img')";
     $id=$cn->exec($sql);
-    if($image){
-        $sql="update blog set img='$img' where id=$id";
-        $cn->exec($sql);
-    }
     header('location:user?_s=blog');exit;
 }
 
@@ -30,7 +28,7 @@ if($id){
 }
 
 ?>
-<form action="user?_s=blog-single&id=<?= $id ?>&_a=<?= $action ?>" method="post">
+<form enctype="multipart/form-data" action="user?_s=blog-single&id=<?= $id ?>&_a=<?= $action ?>" method="post">
     <input type="file" name="image" id="image" class="d-none">
     <div class="row g-3">
         <div class="col-md-12"><div class="form-floating">
@@ -38,7 +36,7 @@ if($id){
         </div></div>
         <div class="col-12">
             <div class="form-floating">
-                <button type="button" class="btn btn-primary" onclick="document.querySelector('#img').click()">Charger la photo</button>
+                <button type="button" class="btn btn-primary" onclick="document.querySelector('#image').click()">Charger la photo</button>
             </div>
         </div>
         <div class="col-12">

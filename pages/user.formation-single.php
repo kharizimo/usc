@@ -1,15 +1,21 @@
 <?php
 if($_a=='update'){
-    $sql="update formation set categorie_id=$categorie_id,lib='$lib',texte='$texte',prix='$prix',etat='$etat' where id=$id";
+    $img=upload_image($_FILES['image']);
+    $clause_img=($img)?$clause_img=",img='$img'":'';
+    $sql="update formation set categorie_id=$categorie_id,lib='$lib',formation_date='$formation_date',texte='$texte',prix='$prix',etat='$etat' $clause_img where id=$id";
     $cn->query($sql);
     header('location:user?_s=formation');exit;
 }
 if($_a=='insert'){
-    $sql="insert into formation(categorie_id,lib,texte,prix,etat) values(categorie_id='$categorie_id',lib='$lib',texte='$texte',prix='$prix',etat='$etat')";
+    $img=upload_image($_FILES['image']);
+    $clause_img=($img)?$clause_img="'$img'":"'formation.jpg'";
+    $sql="insert into formation(categorie_id,lib,formation_date,texte,prix,etat,img) values('$categorie_id','$lib','$formation_date','$texte','$prix','$etat','$img')";
     $cn->exec($sql);
     header('location:user?_s=formation');exit;
 }
 if($_a=='delete'){
+    $img=$cn->query('select img from formation where id=$id',PDO::FETCH_OBJ)->fetch()->img;
+    unlink($root.$img);
     $cn->exec("delete from formation where id=$id");
     header('location:user?_s=formation');exit;
 }
@@ -21,14 +27,16 @@ if($id){
     $action='update';
 }
 ?>
-<form action="user?_s=formation-single&_a=<?= $action ?>&id=<?= $id ?>" method="post">
+
+<form enctype="multipart/form-data" action="user?_s=formation-single&_a=<?= $action ?>&id=<?= $id ?>" method="post">
+    <input type="file" name="image" id="image" class="d-none">
     <div class="row g-3">
         <div class="col-md-6"><div class="form-floating">
-            <img src="img/<?= $row->img ?>" style="max-height: 200px;" alt="">
+            <img id="preview" src="img/<?= $row->img ?>" style="max-height: 200px;" alt="">
         </div></div>
         <div class="col-12">
             <div class="form-floating">
-                <button class="btn btn-primary">Charger la photo</button>
+                <button type="button" onclick="document.querySelector('#image').click()" class="btn btn-primary">Charger la photo</button>
             </div>
         </div>
         <div class="col-12">
@@ -54,15 +62,22 @@ if($id){
         <div class="col-12">
             <div class="form-floating">
                 <input type="text" class="form-control bg-secondary border-0" name="prix"
-                    placeholder="" value="<?= $row->prix??'' ?>">
+                    placeholder="" value="<?= $row->prix??'0' ?>">
                 <label for="lib">Prix</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <input type="date" class="form-control bg-secondary border-0" name="formation_date"
+                    placeholder="" value="<?= $row->formation_date??'' ?>">
+                <label for="lib">Date début</label>
             </div>
         </div>
         <div class="col-12">
             <div class="form-floating">
                 <textarea class="form-control bg-secondary border-0"
                     placeholder="Laissez un message" name="texte"
-                    style="height: 300px"><?= $row->texte ?></textarea>
+                    style="height: 300px"><?= $row->texte??'' ?></textarea>
                 <label for="">Contenu</label>
             </div>
         </div>
@@ -80,10 +95,13 @@ if($id){
             </div>
         </div>
         <div class="col-md-6">
-            <a class="btn btn-outline-primary border-2 w-100 <?= $id?'':'d-none' ?>" href="user?_s=formatiob-single&_a=delete&id=<?= $id ?>">Supprimer</a>
+            <a class="btn btn-outline-primary border-2 w-100 <?= $id?'':'d-none' ?>" href="user?_s=formation-single&_a=delete&id=<?= $id ?>">Supprimer</a>
         </div>
         <div class="col-md-6">
             <button class="btn btn-primary border-2 w-100" type="submit">Publier</button>
         </div>
     </div>
 </form>
+<script>
+    
+</script>

@@ -5,6 +5,9 @@ if($_a=='logout'){
     unset($_SESSION['user-id']);
     header('location:login-user');
 }
+
+$email_current=$cn->query("select email from user where id={$_SESSION['user-id']}")->fetch(PDO::FETCH_OBJ)->email;
+$is_master=($app->master!=$email_current)?'d-none':'';
 ?>
 <!-- Contact Start -->
     <div class="container-fluid py-5">
@@ -22,7 +25,7 @@ if($_a=='logout'){
                         <tr><td><a href="user?_s=formation">Mes Formations</a></td></tr>
                         <tr><td><a href="user?_s=blog">Mes blogs</a></td></tr>
                         <tr><td><a href="user?_s=client">Clients</a></td></tr>
-                        <tr><td><a href="user?_s=user">Utilisateurs</a></td></tr>
+                        <tr class="<?= $is_master ?>"><td><a href="user?_s=user">Utilisateurs</a></td></tr>
                         <tr><td><a href="user?_a=logout">Deconnexion</a></td></tr>
                     </table>
                 </div>
