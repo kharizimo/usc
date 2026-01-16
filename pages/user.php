@@ -6,6 +6,8 @@ if($_a=='logout'){
     header('location:login-user');
 }
 
+if(!isset($_SESSION['user-id'])){header('location:login-user');exit;}
+
 $email_current=$cn->query("select email from user where id={$_SESSION['user-id']}")->fetch(PDO::FETCH_OBJ)->email;
 $is_master=($app->master!=$email_current)?'d-none':'';
 ?>

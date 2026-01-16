@@ -1,12 +1,6 @@
 <?php  
-$sql=<<<SQL
-select 
-s.lib session_lib
- from formation f 
-join session s on f.id=s.formation_id 
-join classe c on s.id=c.session_id 
-where c.client_id={$_SESSION['client-id']}
-SQL;
+$sql="SELECT * from v_formation f JOIN formation_client c ON c.formation_id=f.id WHERE c.client_id={$_SESSION['client-id']}";
+
 $r=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
 ?>
 <table class="table">
@@ -17,9 +11,9 @@ $r=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
     </tr>
     <?php foreach($r as $item): ?>
     <tr>
-        <td><a href="" target="_blank"><?= $item->session_lib ?></a></td>
-        <td>2025/12/11</td>
-        <td><span class="badge badge-warning">En cours</span></td>
+        <td><a href="session-single?id=<?= $item->id ?>" target="_blank"><?= $item->lib ?></a></td>
+        <td><?= $item->formation_date ?></td>
+        <td><span class="badge badge-warning"><?= $item->confirm?'Accepté':'En cours' ?></span></td>
     </tr>
     <?php endforeach ?>
 </table>

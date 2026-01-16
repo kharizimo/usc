@@ -43,7 +43,7 @@ if($_a=='action'){
             </div>
         </div>
         <div class="col-12">
-            <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Connecter</button>
+            <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Soumettre</button>
         </div>
     </div>
 </form>

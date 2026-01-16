@@ -4,6 +4,7 @@ if($_a=='action'){
     $sql="select id from user where email='$email' and pwd='$pwd' and etat=true";
     $id=$cn->query($sql)->fetch(PDO::FETCH_OBJ)->id;
     if($id){
+        unset($_SESSION['client-id']);
         $_SESSION['user-id']=$id;
         header('location:user');
         exit;

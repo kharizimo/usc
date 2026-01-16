@@ -1,4 +1,14 @@
 <?php 
+if($_a=='submit'){
+    if($pwd==$confirm){
+        $sql="insert into client (nom,email,telephone,pwd) values('$nom','$email','$telephone','$pwd')";
+        $cn->exec($sql);
+        header('location:register-success');
+    }
+    else{header('location:register?err=confirrm');}
+    exit;
+}
+
 $title="Inscription"
 ?>
 <!-- Contact Start -->
@@ -15,45 +25,45 @@ $title="Inscription"
                     <h4 class="lh-base mb-4">Vous êtes déjà membre ? Connectez-vous dès maintenant ! <a href="login">Cliquez ici pour vous connecter</a></h4>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form method="post" action="?_a=submit">
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-secondary border-0" id="email"
+                                    <input type="text" class="form-control bg-secondary border-0" name="nom"
                                         placeholder="Votre nom">
                                     <label for="email">Nom</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control bg-secondary border-0" id="phone"
+                                    <input type="tel" class="form-control bg-secondary border-0" name="telephone"
                                         placeholder="Votre Téléphone">
                                     <label for="phone">Téléphone</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-secondary border-0" id="email"
+                                    <input type="email" class="form-control bg-secondary border-0" name="email"
                                         placeholder="Votre Email">
                                     <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="password" class="form-control bg-secondary border-0" id="password"
+                                    <input type="password" class="form-control bg-secondary border-0" name="pwd"
                                         placeholder="Mot de passe">
                                     <label for="password">Mot de passe</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="password" class="form-control bg-secondary border-0" id="confirm"
+                                    <input type="password" class="form-control bg-secondary border-0" name="confirm"
                                         placeholder="confirmation Mot de passe">
                                     <label for="confirm">confirmation Mot de passe</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Connecter</button>
+                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Soumettre</button>
                             </div>
                         </div>
                     </form>

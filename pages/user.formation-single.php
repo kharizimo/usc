@@ -1,14 +1,18 @@
 <?php
 if($_a=='update'){
-    $img=upload_image($_FILES['image']);
-    $clause_img=($img)?$clause_img=",img='$img'":'';
-    $sql="update formation set categorie_id=$categorie_id,lib='$lib',formation_date='$formation_date',texte='$texte',prix='$prix',etat='$etat' $clause_img where id=$id";
+    $ret=upload_images($_FILES['image']);
+    $clause='';
+    if($ret->etat){
+        $img=$ret->file;
+        $clause=",img='$img'";
+    }
+    $sql="update formation set categorie_id=$categorie_id,lib='$lib',formation_date='$formation_date',texte='$texte',prix='$prix',etat='$etat' $clause where id=$id";
     $cn->query($sql);
     header('location:user?_s=formation');exit;
 }
 if($_a=='insert'){
-    $img=upload_image($_FILES['image']);
-    $clause_img=($img)?$clause_img="'$img'":"'formation.jpg'";
+    $ret=upload_images($_FILES['image']);
+    $img=$ret->etat?$ret->file:'formation.jpg';
     $sql="insert into formation(categorie_id,lib,formation_date,texte,prix,etat,img) values('$categorie_id','$lib','$formation_date','$texte','$prix','$etat','$img')";
     $cn->exec($sql);
     header('location:user?_s=formation');exit;
@@ -75,7 +79,7 @@ if($id){
         </div>
         <div class="col-12">
             <div class="form-floating">
-                <textarea class="form-control bg-secondary border-0"
+                <textarea class="summernote form-control bg-secondary border-0"
                     placeholder="Laissez un message" name="texte"
                     style="height: 300px"><?= $row->texte??'' ?></textarea>
                 <label for="">Contenu</label>

@@ -5,6 +5,7 @@ if($_a=='action'){
     $sql="select id from client where email='$email' and pwd='$pwd' and etat=true";
     $id=$cn->query($sql)->fetch(PDO::FETCH_OBJ)->id;
     if($id){
+        unset($_SESSION['user-id']);
         $_SESSION['client-id']=$id;
         $_l='./';
         if($f_id){$_l="session-single?id=$f_id";}

@@ -6,7 +6,7 @@ if($_a=='action'){
     $cn->exec($sql);
     header("location:sessions");
 }
-$title="Services";
+$title="Sessions";
 $sql="select * from v_formation where id=$id";
 $r=$cn->query($sql)->fetch(PDO::FETCH_OBJ);
 $screenshots=explode(';',$r->screenshot);
@@ -40,14 +40,6 @@ if(isset($_SESSION['client-id'])){
         
         <div class="mt-4 text-end">
             <a href="<?=$suscrib_url?>" class="btn btn-success"><?=$suscrib_value?></a>
-        </div>
-        <hr>
-        <div class="row g-4">
-            <?php foreach($screenshots as $item): ?>
-            <div class="col-md-4 col-sm-6">
-                <img src="img/<?=$item?>" alt="" class="w-100 rounded">
-            </div>    
-            <?php endforeach?>
         </div>
     </div>
     <div class="col-md">

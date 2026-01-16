@@ -15,7 +15,7 @@ $pair=false;
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row g-4">
                 <?php 
                 $sql="select * from v_blog";
                 $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);

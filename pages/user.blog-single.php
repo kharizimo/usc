@@ -1,8 +1,12 @@
 <?php 
 if($_a=='update'){
-    $img=upload_image($_FILES['image']);
-    $img_clause=$img?",img='$img'":'';
-    $sql="update blog set titre='$titre',texte='$texte',visible='$visible' $img_clause where id=$id";
+    $ret=upload_images($_FILES['image']);
+    $clause='';
+    if($ret->etat){
+        $img=$ret->file;
+        $clause=",img='$img'";
+    }
+    $sql="update blog set titre='$titre',texte='$texte',visible='$visible' $clause where id=$id";
     $cn->exec($sql);
     header('location:user?_s=blog');exit;
 }
@@ -13,8 +17,8 @@ if($_a=='delete'){
     header('location:user?_s=blog');exit;
 }
 if($_a=='insert'){
-    $img=upload_image($_FILES['image']);
-    $img=$img?$img:'blog.jpg';
+    $ret=upload_images($_FILES['image']);
+    $img=$ret->etat?$ret->file:'blog.jpg';
     $sql="insert into blog(titre,texte,visible,user_id,img) values('$titre','$texte','$visible',{$_SESSION['user-id']},'$img')";
     $id=$cn->exec($sql);
     header('location:user?_s=blog');exit;
@@ -32,7 +36,7 @@ if($id){
     <input type="file" name="image" id="image" class="d-none">
     <div class="row g-3">
         <div class="col-md-12"><div class="form-floating">
-            <img src="img/<?= $row->img ?>" style="max-height: 200px;" alt="">
+            <img id="preview" src="img/<?= $row->img ?>" style="max-height: 200px;" alt="">
         </div></div>
         <div class="col-12">
             <div class="form-floating">
@@ -48,7 +52,7 @@ if($id){
         </div>
         <div class="col-12">
             <div class="form-floating">
-                <textarea class="form-control bg-secondary border-0"
+                <textarea class="summernote form-control bg-secondary border-0"
                     placeholder="Laissez un message" name="texte"
                     style="height: 150px"><?= $row->texte??'' ?></textarea>
                 <label for="">Contenu</label>

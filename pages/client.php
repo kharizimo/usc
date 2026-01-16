@@ -5,6 +5,8 @@ if($_a=='logout'){
     unset($_SESSION['client-id']);
     header('location:login');
 }
+
+if(!isset($_SESSION['client-id'])){header('location:login-user');exit;}
 ?>
 <!-- Contact Start -->
     <div class="container-fluid py-5">
