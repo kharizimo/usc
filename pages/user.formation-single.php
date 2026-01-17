@@ -24,7 +24,7 @@ if($_a=='delete'){
     header('location:user?_s=formation');exit;
 }
 
-$row=(object)['img'=>'formation.jpg'];
+$row=(object)['img'=>'formation.png'];
 $action='insert';
 if($id){
     $row=$cn->query("select * from v_formation where id=$id")->fetch(PDO::FETCH_OBJ);

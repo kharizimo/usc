@@ -6,6 +6,7 @@ where formation_id=$id
 txt;
 $rows=$cn->query($sql,PDO::FETCH_OBJ)->fetchAll();
 ?>
+<h2>Formation : <?= $cn->query("select lib from formation where id=$id")->fetch(PDO::FETCH_OBJ)->lib ?></h2>
 <table class="table">
     <thead><tr>
         <th>Nom</th>

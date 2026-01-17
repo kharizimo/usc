@@ -6,7 +6,7 @@
         <th width="1%"></th>
     </tr></thead>
     <tbody><?= array_reduce($cn->query('select * from v_client',PDO::FETCH_OBJ)->fetchAll(),function($carry,$item){
-        return <<<item
+        return $carry.<<<item
         <tr>
             <td>$item->nom</td>
             <td>$item->email</td>
@@ -14,5 +14,5 @@
             <td><a href="user?_s=client-single&id=$item->id">Ouvrir</a>
         </tr>
 item;
-    }) ?></tbody>
+    },'') ?></tbody>
 </table>

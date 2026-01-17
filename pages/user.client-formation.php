@@ -7,7 +7,9 @@ join formation_client fc on fc.formation_id=f.id
 where fc.client_id=$id
 txt;
 $rows=$cn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+$ret=$cn->query("select nom,email from client where id=$id")->fetch(PDO::FETCH_OBJ)
 ?>
+<h2>Client : <?= $ret->nom ?> (<?= $ret->email ?>)</h2>
 <table class="table">
     <tr>
         <th>Formation</th>
