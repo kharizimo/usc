@@ -19,8 +19,38 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
         <div class="col-md-12">
             <div class="form-floating">
                 <input type="text" class="form-control bg-secondary border-0" name="nom"
-                    placeholder="Votre nom" value="<?= $r['nom'] ?>">
+                    placeholder="Prénom" value="<?= $r['nom'] ?>">
+                <label for="email">Prénom</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-floating">
+                <input type="text" class="form-control bg-secondary border-0" name="nom"
+                    placeholder="Nom" value="<?= $r['nom'] ?>">
                 <label for="email">Nom</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-floating">
+                <input type="text" class="form-control bg-secondary border-0" name="nom"
+                    placeholder="Post-nom" value="<?= $r['nom'] ?>">
+                <label for="email">Post-nom</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-floating">
+                <select name="" id="" class="form-control bg-secondary border-0"><?= array_reduce(['M','F'],function($carry,$item){
+                    return $carry.'<option value="'.$item.'">'.$item.'</option>';
+                }) ?></select>
+                <label for="email">Sexe</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-floating">
+                <select name="" id="" class="form-control bg-secondary border-0"><?= array_reduce(['Célibataire','MArié'],function($carry,$item){
+                    return $carry.'<option value="'.$item.'">'.$item.'</option>';
+                }) ?></select>
+                <label for="email">Etat-Civil</label>
             </div>
         </div>
         <div class="col-md-12">

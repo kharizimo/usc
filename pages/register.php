@@ -1,7 +1,7 @@
 <?php 
 if($_a=='submit'){
     if($pwd==$confirm){
-        $sql="insert into client (nom,email,telephone,pwd) values('$nom','$email','$telephone','$pwd')";
+        $sql="insert into client (email,pwd) values('$email','$pwd')";
         $cn->exec($sql);
         header('location:register-success');
     }
@@ -29,20 +29,6 @@ $title="Inscription"
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-secondary border-0" name="nom"
-                                        placeholder="Votre nom">
-                                    <label for="email">Nom</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-floating">
-                                    <input type="tel" class="form-control bg-secondary border-0" name="telephone"
-                                        placeholder="Votre Téléphone">
-                                    <label for="phone">Téléphone</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-floating">
                                     <input type="email" class="form-control bg-secondary border-0" name="email"
                                         placeholder="Votre Email">
                                     <label for="email">Email</label>
@@ -63,7 +49,10 @@ $title="Inscription"
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Soumettre</button>
+                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">S'inscrire</button>
+                            </div>
+                            <div class="col-12">
+                                <a href="login" class="btn btn-primary border-2 w-100 py-3">Connexion</a>
                             </div>
                         </div>
                     </form>

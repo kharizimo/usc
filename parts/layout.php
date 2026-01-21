@@ -32,10 +32,16 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/review.css" rel="stylesheet">
-    <link rel="stylesheet" href="lib/summernote/summernote-bs4.min.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <style>
+        .note-editor .note-editable {
+            background-color: #2c2c2c !important; /* Fond sombre pour vos yeux */
+            color: #ffffff !important;           /* Texte blanc pour la lisibilité */
+        }
+    </style>
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -65,13 +71,13 @@
 
     <!-- JavaScript Libraries -->
     <script src="lib/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/summernote/summernote-bs4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
@@ -86,10 +92,13 @@
         });
     </script>
     <script>
-        $(function () {
-          //Add text editor
-          $('.summernote').summernote({height: 300})
-        })
+        $(document).ready(function() {
+          $('.summernote').summernote({
+            height: 300,
+            tabsize: 2,
+            // Autres options...
+          });
+        });
     </script>
 </body>
 

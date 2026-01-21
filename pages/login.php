@@ -57,6 +57,9 @@ $title="Login";
                         <div class="col-12">
                             <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Connecter</button>
                         </div>
+                        <div class="col-12">
+                            <a href="register" class="btn btn-primary border-2 w-100 py-3" type="submit">S'inscrire</a>
+                        </div>
                     </div>
                 </form>
             </div>

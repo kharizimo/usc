@@ -5,6 +5,10 @@
 create table client(
     id integer primary key autoincrement,
     nom varchar(100),
+    prenom varchar(100),
+    postnom varchar(100),
+    sexe varchar(100),
+    etat_civil varchar(100),
     telephone varchar(100),
     email varchar(100),
     pwd varchar(100),

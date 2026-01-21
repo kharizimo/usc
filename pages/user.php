@@ -5,6 +5,10 @@ if($_a=='logout'){
     unset($_SESSION['user-id']);
     header('location:login-user');
 }
+if($_a=='formation-confirm'){
+    $sql="update formation_client set confirm=true where formation_id=$formation_id and client_id=$client_id";
+    $cn->exec($sql);
+}
 
 if(!isset($_SESSION['user-id'])){header('location:login-user');exit;}
 
