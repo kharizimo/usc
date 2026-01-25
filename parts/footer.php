@@ -1,7 +1,7 @@
 <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
         <a href="./">
-            <h1 class="display-4 mb-3 text-white text-uppercase">USC</h1>
+            <h1 class="display-4 mb-3 text-white text-uppercase"><img src="img/logo-rect.png" style="border-radius: 20px; border: 5px solid #ecad0e; height: 100px;" alt=""></h1>
         </a>
         <div class="d-flex justify-content-center mb-4">
             <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="<?= $app->x ?>">

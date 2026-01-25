@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
             <a href="./" class="navbar-brand ms-4 ms-lg-0">
-                <h2 class="mb-0 text-primary text-uppercase">USC</h2>
+                <h2 class="mb-0 text-primary text-uppercase"><img src="img/logo-rect.png" style="border-radius: 20px; height: 50px;" alt=""></h2>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">

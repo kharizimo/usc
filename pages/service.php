@@ -19,11 +19,34 @@ $img=[
                     </div>
                 </div>
             </div>
+            <div class="service-item service-item-right">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 order-md-1 text-md-end">
+                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="img/service-4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">Agro pastorale</h3>
+                            <p class="mb-4">
+                                <b>Innover pour un avenir durable</b><br>
+                                Face aux défis climatiques et alimentaires, l'agro-pastorale se réinvente. Découvrez les techniques agricoles modernes et durables, intégrant les nouvelles technologies pour optimiser la production tout en respectant l'environnement.
+                                <ul>
+                                    <li>Techniques agricoles modernes : Utilisation de drones et capteurs pour surveiller les cultures.</li>
+                                    <li>Gestion durable : Pratiques respectueuses de l'environnement pour préserver les ressources naturelles.</li>
+                                </ul>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="service-item service-item-left">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/service-1.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -45,7 +68,7 @@ $img=[
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5 order-md-1 text-md-end">
                         <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/service-2.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -68,49 +91,24 @@ $img=[
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
+                            <img class="img-fluid rounded-circle" src="img/service-3.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
                             <h3 class="text-uppercase">Gestion des immobiliers</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <p class="mb-4">
+                                <b>Optimisez la gestion de votre patrimoine</b><br>
+                                À l'ère de la gestion connectée, maîtrisez tous les aspects de l'immobilier. De la gestion locative dématérialisée à l'analyse de rentabilité, apprenez à utiliser les outils numériques pour valoriser vos biens.
+                                <ul>
+                                    <li>Suivi Digital : Automatisation des contrats et des loyers.</li>
+                                    <li>Analyses de rentabilité : Suivi des performances financières de vos biens.</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/index.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Agro pastorale</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 </div>
