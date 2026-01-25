@@ -7,19 +7,6 @@ $_c??='';
 $_a??='';
 $id??=0;
 
-$app=(object)[
-    'email'=>'me@gmail.com',
-    'telephone'=>'+243823455672',
-    'adresse'=>'123 Avenue des Champs, Kinshasa, RDC',
-    'facebook'=>'#',
-    'x'=>'#',
-    'linkedin'=>'#',
-    'youtube'=>'#',
-    'master'=>'kharizimo@gmail.com'
-];
-
-
-
 /* end */ 
 
 try{
@@ -28,6 +15,10 @@ try{
 catch(PDOException $e){
     die("Erreur de connexion à la base de données : ".$e->getMessage());
 }
+$app=(object)array_reduce($cn->query('select * from config')->fetchAll(PDO::FETCH_OBJ),function($carry,$item){
+    return array_merge($carry,[$item->key=>$item->value]);
+},[]);
+
 
 function upload_image($file){
     $root=__DIR__.'/img/';

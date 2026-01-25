@@ -1,7 +1,7 @@
 <?php 
 if($_a=='update'){
     if($pwd==$confirm){
-        $sql="update client set nom='$nom',telephone='$telephone',email='$email',pwd='$pwd' where id={$_SESSION['client-id']}";
+        $sql="update client set nom='$nom',prenom='$prenom',postnom='$postnom',sexe='$sexe',etat_civil='$etat_civil',telephone='$telephone' where id={$_SESSION['client-id']}";
         $cn->exec($sql);
         header('location:client');
         exit;
@@ -19,7 +19,7 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
         <div class="col-md-12">
             <div class="form-floating">
                 <input type="text" class="form-control bg-secondary border-0" name="nom"
-                    placeholder="Prénom" value="<?= $r['nom'] ?>">
+                    placeholder="Prénom" value="<?= $r['prenom'] ?>">
                 <label for="email">Prénom</label>
             </div>
         </div>
@@ -33,13 +33,13 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
         <div class="col-md-12">
             <div class="form-floating">
                 <input type="text" class="form-control bg-secondary border-0" name="nom"
-                    placeholder="Post-nom" value="<?= $r['nom'] ?>">
+                    placeholder="Post-nom" value="<?= $r['postnom'] ?>">
                 <label for="email">Post-nom</label>
             </div>
         </div>
         <div class="col-md-12">
             <div class="form-floating">
-                <select name="" id="" class="form-control bg-secondary border-0"><?= array_reduce(['M','F'],function($carry,$item){
+                <select name="sexe" id="sexe" class="form-control bg-secondary border-0"><?= array_reduce(['M','F'],function($carry,$item){
                     return $carry.'<option value="'.$item.'">'.$item.'</option>';
                 }) ?></select>
                 <label for="email">Sexe</label>
@@ -47,7 +47,7 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
         </div>
         <div class="col-md-12">
             <div class="form-floating">
-                <select name="" id="" class="form-control bg-secondary border-0"><?= array_reduce(['Célibataire','MArié'],function($carry,$item){
+                <select name="etat_civil" id="etat_civil" class="form-control bg-secondary border-0"><?= array_reduce(['Célibataire','MArié'],function($carry,$item){
                     return $carry.'<option value="'.$item.'">'.$item.'</option>';
                 }) ?></select>
                 <label for="email">Etat-Civil</label>
@@ -58,27 +58,6 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
                 <input type="tel" class="form-control bg-secondary border-0" name="telephone"
                     placeholder="Votre Téléphone" value="<?= $r['telephone'] ?>">
                 <label for="phone">Téléphone</label>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="form-floating">
-                <input type="email" class="form-control bg-secondary border-0" name="email"
-                    placeholder="Votre Email" value="<?= $r['email'] ?>">
-                <label for="email">Email</label>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="form-floating">
-                <input type="password" class="form-control bg-secondary border-0" name="pwd"
-                    placeholder="Mot de passe" value="<?= $r['pwd'] ?>">
-                <label for="password">Mot de passe</label>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="form-floating">
-                <input type="password" class="form-control bg-secondary border-0" name="confirm"
-                    placeholder="confirmation Mot de passe" value="<?= $r['pwd'] ?>">
-                <label for="confirm">confirmation Mot de passe</label>
             </div>
         </div>
         <div class="col-12">

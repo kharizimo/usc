@@ -1,7 +1,7 @@
 <?php 
 if($_a=='action'){
     if($pwd==$confirm){
-        $sql="update client set pwd='$pwd' where id={$_SESSION['client-id']}";
+        $sql="update client set email='$email',pwd='$pwd' where id={$_SESSION['client-id']}";
         $cn->exec($sql);
         header('location:client');
         exit;
@@ -16,6 +16,13 @@ $r=$cn->query("select * from client where id={$_SESSION['client-id']}")->fetch()
 <form action="client">
     <input type="hidden" name="_a" value="action">
     <div class="row g-3">
+        <div class="col-md-12">
+            <div class="form-floating">
+                <input type="email" class="form-control bg-secondary border-0" name="email"
+                    placeholder="Email" value="<?= $r['email'] ?>">
+                <label for="password">Email</label>
+            </div>
+        </div>
         <div class="col-md-12">
             <div class="form-floating">
                 <input type="password" class="form-control bg-secondary border-0" name="pwd"

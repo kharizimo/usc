@@ -1,8 +1,4 @@
 <?php
-if($_a=='formation-confirm'){
-    header('location:user?_s=formation-client&id='.$formation_id);
-    exit;
-}
 $sql=<<<txt
 SELECT c.*,confirm,formation_id,
 (SELECT COUNT(*) FROM formation f WHERE f.id=fc.formation_id) nbr

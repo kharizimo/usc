@@ -11,14 +11,11 @@ create table client(
     etat_civil varchar(100),
     telephone varchar(100),
     email varchar(100),
+    img varchar(100) default 'avatar.png',
     pwd varchar(100),
     create_at datetime default current_timestamp,
     etat boolean default true
 );
-create view v_client as 
-select c.*,
-(select count(*) from formation_client f where f.client_id=c.id) nbr
-from client c;
 
 create table user(
     id integer primary key autoincrement,
@@ -31,18 +28,11 @@ create table blog(
     id integer primary key autoincrement,
     titre varchar(100),
     texte text,
-    img text,
+    img varchar(100) default 'blog.png',
     visible boolean default true, 
     user_id int references user(id) default 1,
     create_at datetime default current_timestamp
 );
-create view v_blog as
-    select b.id, b.titre, b.texte, b.img, b.visible, b.create_at, 
-    u.nom as auteur
-    from blog b
-    join user u on b.user_id = u.id
-    order by b.create_at desc;
-
 
 create table categorie(
     id integer primary key autoincrement,
@@ -58,13 +48,9 @@ create table formation(
     etat varchar(100) default 'Disponible',
     create_at datetime default current_timestamp,
     visible boolean default true,
-    img varchar(100) default 'formation.jpg',
-    screenshot text default 'formation.jpg;formation.jpg;formation.jpg'
+    img varchar(100) default 'formation.png',
+    screenshot text default ''
 );
-create view v_formation as 
-select f.* ,c.lib categorie_lib
-from formation f 
-join categorie c on f.categorie_id=c.id;
 
 create table formation_client(
     formation_id int references formation(id),
@@ -76,4 +62,9 @@ create table formation_client(
 create table newsletters(
     email varchar(100) primary key,
     create_at datetime default current_timestamp
+);
+
+create table config(
+    key varchar(100) primary key,
+    value varchar(100)
 );

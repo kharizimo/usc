@@ -21,7 +21,7 @@ $ret=$cn->query("select nom,email from client where id=$id")->fetch(PDO::FETCH_O
     <?php 
     foreach($rows as $r):
         $confirm_etat=$r->confirm?'Confirmé':'En attente';
-        $confirm_link=$r->confirm?'#':"?_s=client-formation&_a=formation-confirm&formation_id=";
+        $confirm_link=$r->confirm?'#':"?_s=client-formation&_a=formation-confirm&formation_id=$r->formation_id&client_id=$id";
         $confirm_text=$r->confirm?'':'Confirmer'
     ?>
     <tr>

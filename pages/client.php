@@ -21,7 +21,7 @@ if(!isset($_SESSION['client-id'])){header('location:login-user');exit;}
                     </div>
                     <table class="table table-dark mb-0 wow fadeInUp" data-wow-delay="0.3s">
                         <tr><td><a href="?_s=index">Information personnelles</a></td></tr>
-                        <tr><td><a href="?_s=pwd">Information personnelles</a></td></tr>
+                        <tr><td><a href="?_s=pwd">Sécurité</a></td></tr>
                         <tr><td><a href="?_s=formation">Mes Formations</a></td></tr>
                         <tr><td><a href="?_a=logout">Deconnexion</a></td></tr>
                     </table>
